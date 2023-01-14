@@ -3,8 +3,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 //schema fields
-const loginSchema = new Schema(
+const signupSchema = new Schema(
   {
+    name: {
+      type: String,
+      required: true,
+    },
     password: {
       type: String,
       required: true,
@@ -21,4 +25,4 @@ const loginSchema = new Schema(
 
 //EXPORT
 
-module.exports = mongoose.model("Login", loginSchema);
+module.exports = mongoose.model("signup", signupSchema);
