@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 const appRoutes = require("./routes");
-const { createApi } = require("unsplash-js");
+// const { createApi } = require("unsplash-js");
 
 app.use(cors());
 app.use(express.static(path.resolve(__dirname, "../Client/build")));
@@ -26,15 +26,15 @@ app.use((req, res, next) => {
 
 // Api call Unsplash
 
-const unsplash = createApi({
-  accessKey: process.env.KEY,
-});
+// const unsplash = createApi({
+//   accessKey: process.env.KEY,
+// });
 
-unsplash.photos.get(
-  { query: "house", page: 1, perPage: 10, orientation: "portrait" },
-  // `fetch` options to be sent only with _this_ request
-  { headers: { "X-Custom-Header-2": "bar" } }
-);
+// unsplash.photos.get(
+//   { query: "house", page: 1, perPage: 10, orientation: "portrait" },
+//   // `fetch` options to be sent only with _this_ request
+//   { headers: { "X-Custom-Header-2": "bar" } }
+// );
 
 //db connection
 mongoose
