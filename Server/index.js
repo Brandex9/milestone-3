@@ -21,21 +21,15 @@ app.use((req, res, next) => {
 app.use("/", login);
 app.use("/", signup);
 
-// app.get("/", (req, res) => {
-//   res.status(200).json({
-//     message: "Welcome to the Tour API",
-//   });
-// });
-
 // Api call Unsplash
 
 // const unsplash = createApi({
-//   accessKey: process.env.KEY,
+//  accessKey: process.env.KEY,
 // });
 
-// unsplash.photos.get(
-//   { query: "house", page: 1, perPage: 10, orientation: "portrait" },
-//   // `fetch` options to be sent only with _this_ request
+//unsplash.photos.get(
+// { query: "house", page: 1, perPage: 10, orientation: "portrait" },
+// `fetch` options to be sent only with _this_ request
 //   { headers: { "X-Custom-Header-2": "bar" } }
 // );
 
