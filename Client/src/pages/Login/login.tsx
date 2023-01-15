@@ -77,14 +77,14 @@ const Login: FC = (): ReactElement => {
           {" "}
           Don't have an account?{" "}
           <a
-            href="" //singup location
+            href="http://localhost:8080/login/id" //singup location
             className="font-medium text-purple-600 hover:underline"
           >
             Sign up
           </a>
         </p>
       </div>
-      <footer />
+      <Footer />
     </div>
     //footer
   );

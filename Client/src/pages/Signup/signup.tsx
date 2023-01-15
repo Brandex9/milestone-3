@@ -10,7 +10,7 @@ const Signup: FC = (): ReactElement => {
   const submitLogin = () => {
     console.log(email, password);
 
-    fetch("/signup", {
+    fetch("http://localhost:8080/signup", {
       method: "POST",
       headers: new Headers({ "Content-Type": "application/json" }),
       body: JSON.stringify({

@@ -4,20 +4,23 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
-const appRoutes = require("./routes");
+const login = require("./routes/login");
+const signup = require("./routes/signup");
 // const { createApi } = require("unsplash-js");
 
 app.use(cors());
-app.use(express.static(path.resolve(__dirname, "../Client/build")));
-app.use(express.static("public"));
+// app.use(express.static(path.resolve(__dirname, "../Client/build")));
+// app.use(express.static("public"));
+
+// // ROOT
+// app.use((req, res, next) => {
+//   res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+// });
 
 //routes
-appRoutes(app);
+app.use("/", login);
+app.use("/", signup);
 
-// ROOT
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
-});
 // app.get("/", (req, res) => {
 //   res.status(200).json({
 //     message: "Welcome to the Tour API",
