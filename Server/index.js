@@ -43,7 +43,5 @@ mongoose
   .catch((err) => console.error(err));
 
 let PORT = process.env.PORT;
-if (PORT == null || PORT == "") {
-  PORT = 5000;
-}
+
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
