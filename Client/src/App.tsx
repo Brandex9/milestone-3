@@ -12,6 +12,8 @@ const App: FC = (): ReactElement => {
     <>
       <Nav />
       <Body />
+      <Login />
+      <Signup />
       <Footer />
     </>
   );
