@@ -1,5 +1,6 @@
 import React, { useEffect, useState, FC, ReactElement } from "react";
-import axios from "axios";
+import Nav from "../../components/nav/Nav";
+import Footer from "../../components/footer/Footer";
 
 // const fetchLogin = async () => {
 //   const data = await axios.get("http://");
@@ -25,10 +26,12 @@ const Login: FC = (): ReactElement => {
   };
 
   return (
+    //nav
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+      <Nav />
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-md lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-purple-700 underline">
-          Sign in
+          Log in
         </h1>
         <form className="mt-6">
           <div className="mb-2 email">
@@ -81,7 +84,9 @@ const Login: FC = (): ReactElement => {
           </a>
         </p>
       </div>
+      <footer />
     </div>
+    //footer
   );
 };
 

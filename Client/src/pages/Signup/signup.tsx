@@ -1,5 +1,7 @@
 import React, { useEffect, useState, FC, ReactElement } from "react";
-import axios from "axios";
+import Nav from "../../components/nav/Nav";
+import Footer from "../../components/footer/Footer";
+import { BsHouse } from "react-icons/bs";
 
 const Signup: FC = (): ReactElement => {
   const [name, setName] = useState<string>("");
@@ -24,10 +26,14 @@ const Signup: FC = (): ReactElement => {
 
   return (
     <div>
+      <Nav />
       <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
         <div>
           <a href="/">
-            <h3 className="text-4xl font-bold text-purple-600">Logo</h3>
+            <h3 className="text-4xl font-bold text-purple-600">
+              {" "}
+              <BsHouse size={60} />
+            </h3>
           </a>
         </div>
         <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg">
@@ -112,6 +118,7 @@ const Signup: FC = (): ReactElement => {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
