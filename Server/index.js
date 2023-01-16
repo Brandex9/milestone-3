@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require("path");
+// const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
@@ -9,13 +9,13 @@ const signup = require("./routes/signup");
 // const { createApi } = require("unsplash-js");
 
 app.use(cors());
-app.use(express.static(path.resolve(__dirname, "../Client/build")));
-app.use(express.static("public"));
+// app.use(express.static(path.resolve(__dirname, "../Client/build")));
+// app.use(express.static("public"));
 
 // ROOT
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
-});
+// app.use((req, res, next) => {
+//   res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+// });
 
 //routes
 app.use("/", login);
